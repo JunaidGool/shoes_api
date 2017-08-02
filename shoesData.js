@@ -14,12 +14,12 @@ module.exports = function(){
          in_stock : 8
         },
         {brandName : 'puma',
-         size : 10,
+         size : 9,
          color : 'white', 
          price : 250,
          in_stock : 10
         },
     ];
-    
+     
     return shoesData;
 }
