@@ -1,31 +1,21 @@
 module.exports = function(){
+    //import shoesData from shoesData.js
+    const ShoesData = require('./shoesData');
+    //import BrandNames from brandNames.js
+    const BrandNames = require('./brandNames');
     
-    var shoesData = [
-        {brandName : 'Addidas',
-         color : 'Red',
-         price : 350,
-         in_stock : 5
-        },
-        {brandName : 'Nike',
-         color : 'Blue', 
-         price : 500,
-         in_stock : 8
-        },
-        {brandName : 'Puma',
-         color : 'White', 
-         price : 250,
-         in_stock : 10
-        },
-        
-    ];
+    //Stantiate ShoesData
+    const shoesData = ShoesData();
     
+    //Stantiate BrandNames
+    const brandNames = BrandNames(shoesData);
+       
     const shoes = function(req, res){
         res.send(shoesData);
     };
     const brands = function(req, res){
-        
-        
-        res.send('List all Brands'); 
+
+        res.send(brandNames); 
     };
     const sizes = function(req, res){
         res.send('List all Sizes');
