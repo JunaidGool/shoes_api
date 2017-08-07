@@ -32,7 +32,7 @@ app.use(function(err,req,res,next){
     res.status(422).send({error: err.message})
 });
 //setup port
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 //listen for requests
 app.listen(port, function(){
