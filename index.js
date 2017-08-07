@@ -1,40 +1,31 @@
 const express = require('express');
-const exphbs = require('express-handlebars');
-const mongoose = require('mongoose');
-const Shoes = require('./shoesApi/api/models/shoesModel');
+const routes = require('./routes/api');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
-
-// parse application/x-www-form-urlencoded 
-app.use(bodyParser.urlencoded({ extended: false }));
- 
-// parse application/json 
-app.use(bodyParser.json());
-
-
-//import module from shoes.js
-const routes = require('./shoesApi/api/routes/shoesRoutes');
-
-// Stantiate appliciation instance
+//setup express app
 const app = express();
 
-//Stantiate instance of ShoesRoutes
-const shoesRoutes = routes(app);
+//connect to mongoDB
+mongoose.connect('mongodb://localhost/shoesDB');
 
-//create deafult route
-app.get('/', function(req, res){
-    res.send('Home')
+//overide mongoode promise with global promis
+//because mongoose promise is depracated
+mongoose.Promise = global.Promise;
+
+app.use(bodyParser.json());
+
+//initialise routes
+app.use('/api', routes);
+
+//error handling middlware
+app.use(function(err,req,res,next){
+    res.status(422).send({error: err.message})
 });
+//setup port
+const port = process.env.port || 3000;
 
-//configure express handlebars
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
-
-
-// allocate port number
-const port = process.env.PORT || 3007;
-
-// listen for port
+//listen for requests
 app.listen(port, function(){
-    console.log("Shoe API started on port: " + port)
+    console.log('Now listening to Port Number: ' + port)  
 });
