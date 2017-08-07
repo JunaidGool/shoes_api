@@ -23,6 +23,10 @@ app.use(bodyParser.json());
 //initialise routes
 app.use('/api', routes);
 
+app.get('/', function(req,res){
+  res.send('home')
+})
+
 //error handling middlware
 app.use(function(err,req,res,next){
     res.status(422).send({error: err.message})
