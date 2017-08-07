@@ -27,5 +27,5 @@ const port = process.env.port || 3000;
 
 //listen for requests
 app.listen(port, function(){
-    console.log('Now listening to Port Number: ' + port)  
+    console.log('Now listening to Port Number: ' + port)
 });
