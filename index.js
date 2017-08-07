@@ -7,7 +7,10 @@ const mongoose = require('mongoose');
 const app = express();
 
 //connect to mongoDB
-mongoose.connect('mongodb://localhost/shoesDB');
+// mongoose.connect('mongodb://localhost/shoesDB');
+
+const mongoURL = process.env.MONGO_DB_URL || "mongodb://localhost/shoesDB";
+mongoose.connect(mongoURL);
 
 //overide mongoode promise with global promis
 //because mongoose promise is depracated
