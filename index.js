@@ -13,6 +13,8 @@ mongoose.connect('mongodb://localhost/shoesDB');
 //because mongoose promise is depracated
 mongoose.Promise = global.Promise;
 
+app.use(express.static('public'));
+
 app.use(bodyParser.json());
 
 //initialise routes
