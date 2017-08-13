@@ -19,6 +19,14 @@ mongoose.Promise = global.Promise;
 app.use(express.static('public'));
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(function(req, res, next){
+  res.header('Access-Control-Allow-Origin', "*");
+  res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
 
 //initialise routes
 app.use('/api', routes);
@@ -29,6 +37,7 @@ app.get('/', function(req,res){
 
 //error handling middlware
 app.use(function(err,req,res,next){
+    console.log(err);
     res.status(422).send({error: err.message})
 });
 //setup port

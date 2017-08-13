@@ -5,19 +5,19 @@ const Schema = mongoose.Schema;
 const ShoeSchema = new Schema({
     brand:{
         type: String,
-        required:[true, 'Brand Field Is Required']
+         required:[true, 'Brand Field Is Required']
     },
     color:{
         type: String,
-        required:[true, 'Color Field Is Required']
+         required:[true, 'Color Field Is Required']
     },
     size:{
         type: Number,
-        required:[true, 'Size Field Is Required']
+         required:[true, 'Size Field Is Required']
     },
     price:{
         type: Number,
-        required:[true, 'Price Field Is Required']
+         required:[true, 'Price Field Is Required']
     },
     in_stock:{
         type: Number
@@ -27,7 +27,3 @@ const ShoeSchema = new Schema({
 const Shoe = mongoose.model('shoe', ShoeSchema);
 
 module.exports = Shoe;
-
-
-
-

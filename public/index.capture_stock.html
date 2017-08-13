@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>shoes_api_front_end</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="handlebars-v4.0.5.js"></script>
+    <style>
+        .sidebar{padding: 60px 10px; text-align: center; background: #eee;}
+        .content{padding: 60px 10px; text-align: center; background: #ddd;}
+        .thumb{padding: 60px 10px; text-align: center; background: #ddd;}
+        .thumb:nth-child(even){background: #eee;}
+        h1, h2{margin: 30px 0;}
+        .container-fluid, .container{}
+    </style>
+        <script src="handlebars-v4.0.5.js"></script>
+        <script src='js/jquery.js'></script>
+        <script src='js/bootstrap.min.js'></script>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/index.html" class="navbar-brand">SHOE CATALOGUE</a>
+          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-dropdown">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="nav-dropdown">
+        <ul class="nav navbar-nav ">
+          <li><a href="index.html">View Stock</a></li>
+          <li class="active"><a href="#">Add Stock</a></li>
+        </ul>
+        <button class="btn btn-default navbar-btn navbar-right" style="margin-left: 10px;">Register</button>
+        <button class="btn btn-primary navbar-btn navbar-right">Login</button>
+      </div>
+    </div>
+    </nav>
+
+
+
+        <div class="container-fluid">
+          <div class="col-xs-12 col-md-6 col-lg-8 content">
+          <h3>Add New Shoe Shoe</h3>
+          <form>
+            <div class="form-group">
+            <input class="form-control" text="" id="brand" placeholder="Enter Brand"/>
+            </div>
+            <div class="form-group">
+            <input class="form-control" text="" id="color" placeholder="Enter Color"/>
+            </div>
+            <div class="form-group">
+            <input class="form-control" text="" id="size" placeholder="Enter Size"/>
+            </div>
+            <div class="form-group">
+            <input class="form-control" text="" id="price" placeholder="Enter Price"/>
+            </div>
+            <div class="form-group">
+            <input class="form-control" text="" id="in_stock" placeholder="Enter Quantity"/>
+            </div>
+          </form>
+          <button class="btn btn-success" id="add-shoe">Add New</button>
+          <button class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+     
+   
+    <script src='js/add_new_shoe.js'></script>
+    <script src='js/main.js'></script>
+
+    <script>
+        $(".nav li").on("click", function(){
+            $(".nav li").removeClass("active");
+            $(this).addClass("active");
+        });
+    </script>
+  </body>
+</html>

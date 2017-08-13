@@ -4,7 +4,7 @@ const Shoe = require('../models/shoeModel')
 
 // add a new shoe to stock
 router.post('/shoes', function(req,res,next){
-    Shoe.create(req.body).then(function(shoe){
+    Shoe.create(req.body.stock).then(function(shoe){
         res.json({
           stock: shoe});
     }).catch(next);
