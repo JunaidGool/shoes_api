@@ -34,8 +34,8 @@
 
         <div class="collapse navbar-collapse" id="nav-dropdown">
         <ul class="nav navbar-nav ">
-          <li class="active"><a href="#">View Stock</a></li>
-          <li><a href="index.capture_stock.html">Add Stock</a></li>
+          <li class="active" id="viewStock"><a href="#">View Stock</a></li>
+          <li ><a href="#" id="addStockDisplay">Add Stock</a></li>
         </ul>
         <button class="btn btn-default navbar-btn navbar-right" style="margin-left: 10px;">Register</button>
         <button class="btn btn-primary navbar-btn navbar-right">Login</button>
@@ -45,6 +45,9 @@
 
     <div style="max-width: 1200px; margin: 0 auto; padding: 10px;" >
       <div class="container-fluid">
+          
+          <div class="row">
+        <div class="col-xs-2 col-md-1 " style="position: relative; left:25px; padding: 5px;">
           <div class="dropdown allBrands" id="selectBrandName">
 
             <script class="allBrandsTemplate" type="text/x-handlebars.template">
@@ -54,13 +57,16 @@
               </button>
 
               <ul class="dropdown-menu" id="drop_down_menu">
+                  <li><a href="#" id="all" value="all">all</a>
                 {{#each brandname}}
-                  <li><a href="#" value={{this.brand}}>{{this.brand}}</a></li>
+                  <li><a href="#" value={{this}}>{{this}}</a></li>
                 {{/each}}
               </ul>
         </script>
       </div>
-
+              </div>
+              
+<div class="col-xs-2 col-md-1 " style="position: relative; left:25px; padding: 5px;">
           <div class="dropdown allSizes" id="selectSizes">
             <script class="allSizesTemplate" type="text/x-handlebars.template">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sizes
@@ -69,15 +75,18 @@
               </button>
 
               <ul class="dropdown-menu" id="selectSize">
+                  <li><a href="#" id="anchor_all" value="all">all</a>
                 {{#each size}}
-                  <li><a href="#" value={{this.size}}>{{this.size}}</a></li>
+                  <li><a href="#" value={{this}}>{{this}}</a></li>
                 {{/each}}
               </ul>
         </script>
       </div>
+              </div>
+          </div>
 
         <div class="container-fluid">
-          <div class="col-xs-12 col-md-6 col-lg-8 content">
+          <div class="col-xs-12 col-md-6 col-lg-8 content" style="visibility: hidden" id="addStockForm">
           <h3>Add New Shoe Shoe</h3>
           <form>
             <div class="form-group">
@@ -102,8 +111,8 @@
       </div>
 
       <div class="container-fluid">
-        <div class="row" border= '1px solid red'>
-          <div class= "col-xs-4 col-sm-3 col-md-2 allShoes" style="position:relative; width:100%;">
+        <div class="row" border= '1px solid red' style="position:relative; bottom:450px">
+          <div class= "col-xs-4 col-sm-3 col-md-2 allShoes" style="position:relative; width:100%;" id="shoeList">
             <script class="allShoesTemplate" type="text/x-handlebars.template">
 
             <h3 >Shoe Description</h3>
@@ -124,9 +133,14 @@
       </div>
     </div>
           
+    <script src='js/get_brand_size.js'></script>  
     <script src='js/find_size.js'></script>
-    <script src='js/find_brand.js'></script>     
+    <script src='js/get_sizes.js'></script>
+    <script src='js/find_brand.js'></script>
+    <script src='js/get_brands.js'></script>
     <script src='js/view_all_shoes.js'></script>
+    <script src='js/filter_brands.js'></script>
+    <script src='js/filter_sizes.js'></script>
     <script src='js/add_new_shoe.js'></script>
     <script src='js/main.js'></script>
 
