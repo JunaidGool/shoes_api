@@ -52,8 +52,9 @@ router.get('/shoes/brands/:brandname/sizes/:size', function(req,res,next){
 });
 
 //update the stock levels when a shoe is sold
-router.post('/shoes/sold/:id', function(req,res,next){
+router.post('/shoes/sold/:id/:stock_sold', function(req,res,next){
     var shoeID = req.params.id;
+    var stock_sold = req.params.id;
 
     Shoe.findOne({_id: shoeID}).then(function(result){
       console.log(result)

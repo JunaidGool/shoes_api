@@ -1,6 +1,8 @@
 var allShoes = document.querySelector('.allShoes');
 var allBrands = document.querySelector('.allBrands');
 var allSizes = document.querySelector('.allSizes');
+var brandList = document.querySelector('.brandList');
+var brand_size = document.querySelector('.brand_size');
 
 var allShoesTemplate = document.querySelector('.allShoesTemplate');
 var allShoesTemplateInstance = Handlebars.compile(allShoesTemplate.innerHTML);
@@ -11,52 +13,52 @@ var allBrandsTemplateInstance = Handlebars.compile(allBrandsTemplate.innerHTML)
 var allSizesTemplate = document.querySelector('.allSizesTemplate');
 var allSizesTemplateInstance = Handlebars.compile(allSizesTemplate.innerHTML);
 
+var brandListTemplate = document.querySelector('.brandListTemplate');
+var brandListTemplateInstance = Handlebars.compile(brandListTemplate.innerHTML);
+
+var brand_sizeTemplate = document.querySelector('.brand_sizeTemplate');
+var brand_sizeTemplateInstance = Handlebars.compile(brand_sizeTemplate.innerHTML);
+
+var uniqueBrands = [];
+var uniqueSizes = [];
+
+var brandMap = {};
+var sizeMap = {};
+
+var brands_sizes_array = [];
+var sizes_for_brand_array = [];
+
+
 var brand = document.getElementById('brand');
 var color = document.getElementById('color');
 var size = document.getElementById('size');
 var price = document.getElementById('price');
 var in_stock = document.getElementById('in_stock');
 
+display_stock();
 
-    $('#addStockDisplay').on('click', function(e){
-        
-        var addStockDisplay = document.getElementById('addStockForm');
-        var selectBrandName = document.getElementById('selectBrandName');
-        var selectSizes = document.getElementById('selectSizes');
-        var shoeList = document.getElementById('shoeList');
-        
-        addStockDisplay.style.visibility = "visible";
-        selectBrandName.style.visibility = "hidden";
-        selectSizes.style.visibility = "hidden";
-        shoeList.style.visibility = "hidden";
-        
-    });
+display_add_stock();
 
- $('#viewStock').on('click', function(e){
-        
-        var addStockDisplay = document.getElementById('addStockForm');
-        var selectBrandName = document.getElementById('selectBrandName');
-        var selectSizes = document.getElementById('selectSizes');
-        var shoeList = document.getElementById('shoeList');
-        
-        addStockDisplay.style.visibility = "hidden";
-        selectBrandName.style.visibility = "visible";
-        selectSizes.style.visibility = "visible";
-        shoeList.style.visibility = "visible";
-        
-    });
-
-
+display_brands();
 
 add_new_shoe();
 
 view_all_shoes();
 
-find_brand();
-
 find_size();
 
-//find_brand_size();
+find_brand();
+
+
+
+
+
+
+
+
+
+
+
 
 
 

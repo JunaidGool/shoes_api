@@ -1,4 +1,5 @@
 function get_sizes(selectedSize){
+    
     $.ajax({
         type: 'GET',
         url: 'http://localhost:9001/api/shoes/sizes/' + selectedSize,

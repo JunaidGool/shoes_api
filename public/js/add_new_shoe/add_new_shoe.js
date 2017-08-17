@@ -27,8 +27,7 @@ function add_new_shoe(){
     price.value = "";
     in_stock.value = "";
       
-//      $.post("http://localhost:9001/api/shoes", add_new_shoe);
-      
+    
   });
     
    

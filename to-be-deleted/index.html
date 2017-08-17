@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>shoes_api_front_end</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    <link rel="stylesheet" type="text/css" href="css/style.css">-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="handlebars-v4.0.5.js"></script>
+    <style>
+        .sidebar{padding: 60px 10px; text-align: center; background: #eee;}
+        .content{padding: 60px 10px; text-align: center; background: #ddd;}
+        .thumb{padding: 60px 10px; text-align: center; background: #ddd;}
+        .thumb:nth-child(even){background: #eee;}
+        h1, h2{margin: 30px 0;}
+        .container-fluid, .container{}
+    </style>
+        <script src="handlebars-v4.0.5.js"></script>
+        <script src='js/jquery.js'></script>
+        <script src='js/bootstrap.min.js'></script>
+
+  </head>
+  <body>
+      
+      <div class="container-fluid">
+      <h1>TEST</h1>
+          </div>
+
+      <div class="container-fluid">
+        <div class="row" border= '1px solid red'>
+          <div class= "allShoes" id="shoeList">
+            <script class="allShoesTemplate" type="text/x-handlebars.template">
+
+            <h3 >Shoe Description</h3>
+            {{#each stock}}
+              <ul class="" >
+                <li>Brand: {{this.brand}}</li>
+                <li>Size:  {{this.size}}</li>
+                <li>Color: {{this.color}}</li>
+                <li>Price: {{this.price}}</li>
+                <li>Stock: {{this.in_stock}}</li>
+            </ul>
+            {{/each}}
+
+              </script>
+        </div>
+      </div>
+    </div>
+      
+      <div class="container-fluid">
+        <div class="row" border= '1px solid red'>
+          <div class= "brandList">
+            <script class="brandListTemplate" type="text/x-handlebars.template">
+
+            <h3 >Brand List</h3>
+            {{#each stock}}
+              <ul class="" >
+                <li>Brand: {{this.brand}}</li>
+            </ul>
+            {{/each}}
+                
+              </script>
+        </div>
+      </div>
+    </div>
+      
+    <div class="container-fluid">
+        <div class="row" border= '1px solid red'>
+          <div class= "brandSize" id="brandSize">
+            <script class="brandSizeTemplate" type="text/x-handlebars.template">
+
+            <h3 >display brands and sizes</h3>
+            {{#each stock}}
+              <ul class="" >
+                <li>Brand: {{this.brand}}</li>
+                <li>Size:  {{this.size}}</li>
+                <li>Color: {{this.color}}</li>
+                <li>Price: {{this.price}}</li>
+            </ul>
+            {{/each}}
+
+              </script>
+        </div>
+      </div>
+    </div>
+          
+     
+    <script src='js/view_all_shoes.js'></script>
+    <script src='js/main.js'></script>
+
+    <script>
+        $(".nav li").on("click", function(){
+            $(".nav li").removeClass("active");
+            $(this).addClass("active");
+        });
+    </script>
+  </body>
+</html>

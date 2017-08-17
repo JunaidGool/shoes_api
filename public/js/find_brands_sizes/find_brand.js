@@ -6,10 +6,10 @@ function find_brand(){
         if(selectedBrand != "all"){
             
             var brandData = get_brands(selectedBrand);
-            
+
         } else {
             
-            view_all_shoes()
+            view_all_shoes();
         };
     });
 };
