@@ -20,7 +20,7 @@ function add_new_shoe(){
       $.ajax({
       contentType: 'application/x-www-form-urlencoded',
       type: 'POST',
-      url: 'http://localhost:9001/api/shoes',
+      url: 'https://codex-shoes-api.herokuapp.com/api/shoes',
       data: shoe,
       success: function(shoes){
 
@@ -43,7 +43,7 @@ function sale(){
 
       contentType: 'application/x-www-form-urlencoded',
       type: 'POST',
-      url: 'http://localhost:9001/api/shoes/sold/' + objectIDsale + '/' + in_stockSale + '/' + qtySold,
+      url: 'https://codex-shoes-api.herokuapp.com/api/shoes/sold/' + objectIDsale + '/' + in_stockSale + '/' + qtySold,
       data: objectIDsale, in_stockSale, qtySold,
       success: function(shoes){
         alert('you sold shoes');
