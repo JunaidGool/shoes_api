@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 //create Shoe Schema and Model
 const ShoeSchema = new Schema({
+    img:{
+        data: Buffer,
+        type: String
+    },
     brand:{
         type: String,
          required:[true, 'Brand Field Is Required']

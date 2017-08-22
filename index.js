@@ -31,6 +31,7 @@ app.use(function(req, res, next){
 //initialise routes
 app.use('/api', routes);
 
+
 app.get('/', function(req,res){
   res.send('home')
 })

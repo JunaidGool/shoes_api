@@ -1,96 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>shoes_api_front_end</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="handlebars/handlebars-v4.0.5.js"></script>
-    <style>
-        .sidebar{padding: 60px 10px; text-align: center; background: #eee;}
-        .content{padding: 60px 10px; text-align: center; background: #ddd;}
-        .thumb{padding: 60px 10px; text-align: center; background: #ddd;}
-        .thumb:nth-child(even){background: #eee;}
-        h1, h2{margin: 30px 0;}
-        .container-fluid, .container{}
-    </style>
-        
-        <script src='js/libraries/jquery.js'></script>
-        <script src='js/libraries/bootstrap.min.js'></script>
 
-  </head>
-  <body>
+<head>
+  <title>shoes_api_front_end</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="/index.html" class="navbar-brand">SHOE CATALOGUE</a>
-          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-dropdown">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          </button>
-        </div>
+  <link href="libraries/bootstrap.min.css" rel="stylesheet">
+  <script src="libraries/handlebars-v4.0.5.js"></script>
+  <script src='libraries/jquery.js'></script>
+  <script src='libraries/bootstrap.min.js'></script>
 
-        <div class="collapse navbar-collapse" id="nav-dropdown">
-        <ul class="nav navbar-nav ">
-          <li><a href="#" id="viewBrands">Brands</a></li>
-          <li class="active" id="viewStock"><a href="#">View All Shoes</a></li>
-          <li ><a href="#" id="addStockDisplay">Add Shoe</a></li>
-            
-        </ul>
-        <button class="btn btn-default navbar-btn navbar-right" style="margin-left: 10px;">Register</button>
-        <button class="btn btn-primary navbar-btn navbar-right">Login</button>
-      </div>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="/index.html" class="navbar-brand">SHOE CATALOGUE</a>
+      <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-dropdown">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
     </div>
-    </nav>
 
-    <div style="max-width: 1200px; margin: 0 auto; padding: 10px;" >
-      <div class="container-fluid">
-          
-          <div class="row">
-        <div class="col-xs-1 col-md-1 " style="position: relative; left:25px; padding: 5px; padding-right: 10px">
-          <div class="dropdown allBrands" id="selectBrandName">
+    <div class="collapse navbar-collapse" id="nav-dropdown">
+    <ul class="nav navbar-nav ">
+      <li><a href="#" id="viewBrands">Brands</a></li>
+      <li class="active" id="viewStock"><a href="#">View All Shoes</a></li>
+      <li ><a href="#" id="addStockDisplay">Add Shoe</a></li>
 
-            <script class="allBrandsTemplate" type="text/x-handlebars.template">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Brands
-                  <div class="caret">
-                  </div>
-              </button>
+    </ul>
+    <button class="btn btn-default navbar-btn navbar-right">Register</button>
+    <button class="btn btn-primary navbar-btn navbar-right">Login</button>
+  </div>
+</div>
+</nav>
 
-              <ul class="dropdown-menu" id="drop_down_menu">
-                  <li><a href="#" id="all" value="all">all</a>
-                {{#each brandname}}
-                  <li><a href="#" value={{this}}>{{this}}</a></li>
-                {{/each}}
-              </ul>
-        </script>
-      </div>
-              </div>
-              
-<div class="col-xs-1 col-md-1 " style="position: relative; left:50px; padding: 5px;">
-          <div class="dropdown allSizes" id="selectSizes">
-            <script class="allSizesTemplate" type="text/x-handlebars.template">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sizes
-                  <div class="caret">
-                  </div>
-              </button>
 
-              <ul class="dropdown-menu" id="selectSize">
-                  <li><a href="#" id="anchor_all" value="all">all</a>
-                {{#each size}}
-                  <li><a href="#" value={{this}}>{{this}}</a></li>
-                {{/each}}
-              </ul>
-        </script>
-      </div>
-              </div>
-          </div>
 
-        <div class="container-fluid">
-          <div class="col-xs-12 col-md-6 col-lg-8 content" style="visibility: hidden; position:relative; left:200px; bottom:50px" id="addStockForm">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 10px;" >
+
+  <div class="container-fluid">
+          <div class="col-xs-12 col-md-6 col-lg-8 content"  id="addStockForm" style="display: none;">
           <h3>Add New Shoe Shoe</h3>
           <form>
+            <div class="form-group">
+
+            <input  text="" type ="file" id="file" placeholder="Select Image">
+            </div>
             <div class="form-group">
             <input class="form-control" text="" id="brand" placeholder="Enter Brand"/>
             </div>
@@ -110,125 +69,112 @@
           <button class="btn btn-success" id="add-shoe">Add New</button>
           <button class="btn btn-danger">Delete</button>
         </div>
-      </div>
+      </div><br><br>
 
-      <div class="container-fluid">
-        <div class="row" border= '1px solid red' style="position:relative; bottom:450px">
-          <div class= "col-xs-4 col-sm-3 col-md-2 allShoes" style="position:relative; width:100%;" id="shoeList">
-            <script class="allShoesTemplate" type="text/x-handlebars.template">
+  <form>
 
-            <h3 >Shoe Description</h3>
-            <div class="d-inline bg-success" style="border: 1px solid">
-            {{#each stock}}
-            <a id="sale">
-              <ul class="col-xs-4 col-sm-3 col-md-2 list-unstyled" >
-                <li>Brand: {{this.brand}}</li>
-                <li>Size:  {{this.size}}</li>
-                <li>Color: {{this.color}}</li>
-                <li>Price: {{this.price}}</li>
-                <li>Stock: {{this.in_stock}}</li>
-            </ul>
-            </a>
-            {{/each}}
+    <div class="col-xs-12 col-md-6 col-lg-8 form-group allBrands" id="selectBrandName">
 
-            </div>
-              </script>
-        </div>
-      </div>
+
+      <script class="allBrandsTemplate" type="text/x-handlebars.template">
+<!-- <label for="brands"> Select Brand</label> -->
+
+        <select class="form-control" id="brands">
+
+        <option>Select Brand</option>
+        <option>all</option>
+          {{#each brandname}}
+        <option type="text" value={{this.brand}}>{{this.brand}}</option>
+          {{/each}}
+      </select>
+
+      </script>
     </div>
-          
-    <div class="container-fluid">
-       <div class="row" border= '1px solid red'>
-          <div class="brandList" id="selectBrandList" style="position:relative; bottom:500px; display: none">
-            <script class="brandListTemplate" type="text/x-handlebars.template">
+  </form>
 
-            <h3 >Brand List</h3>
-            {{#each stock}}
-              <ul>
-                <li><a href="#" id="brandList" value={{this.brand}} id> {{this.brand}}</a></li>
-            </ul>
-            {{/each}}
-              </script>
-        </div>
-    </div>
- </div>
-          
-    <div class="container-fluid">
-       <div class="row" border= '1px solid red'>
-          <div class="brand_size" id="brand_size" style="">
-            <script class="brand_sizeTemplate" type="text/x-handlebars.template">
+  <div class="col-xs-12 col-md-6 col-lg-8 form-group allSizes" id="selectSize">
 
-            <h3 >Brand_Size List</h3>
-            {{#each stock}}
-              <ul>
-                <li>Brand: {{this.brand}}</li>
-                <li>Size:  {{this.size}}</li>
-                <li>Color: {{this.color}}</li>
-                <li>Price: {{this.price}}</li>
-                <li>Stock: {{this.in_stock}}</li>
-                
-            </ul>
-            {{/each}}
-              </script>
-        </div>
-    </div>
- </div>
-          
-<div class="container-fluid">
-    
-    <form>
-        <div class="form-group">
-            <input class="form-control disabled" type="text" disabled id="brand" placeholder={{this.brand}}/>
-        </div>
-        
-        <div class="form-group">
-            <input class="form-control" type="text" disabled id="color" placeholder={{this.color}}/>
-        </div>
-        
-        <div class="form-group">
-            <input class="form-control" type="text" disabled id="size" placeholder={{this.size}}/>
-        </div>
-        
-        <div class="form-group">
-            <input class="form-control" type="text" disabled id="price" placeholder={{this.price}}/>
-        </div>
-        
-        <div class="form-group">
-            <input class="form-control" text="" id="in_stock" placeholder="Please Enter QTY to Purchase"/>
-        </div>
-    
-    </form>
-    
-    <button class="btn btn-success" id="purchase">Purchase</button>
-          
-          
-          
-          
-          
-          
-          
-</div>
-            
-    <script src='js/filter_brands_sizes/filter_brands_sizes.js'></script>
-    <script src='js/find_brands_sizes/find_brand_size.js'></script>
-    <script src='js/get_brands_sizes/get_brands_sizes.js'></script>
-    <script src='js/find_brands_sizes/find_size.js'></script>
-    <script src='js/get_brands_sizes/get_sizes.js'></script>
-    <script src='js/find_brands_sizes/find_brand.js'></script>
-    <script src='js/get_brands_sizes/get_brands.js'></script>
-    <script src='js/get_brands_sizes/view_all_shoes.js'></script>
-    <script src='js/filter_brands_sizes/filter_brands.js'></script>
-    <script src='js/filter_brands_sizes/filter_sizes.js'></script>
-    <script src='js/add_new_shoe/add_new_shoe.js'></script>
-    <script src='js/display/display_add_stock.js'></script>   
-    <script src='js/display/display_stock.js'></script>
-    <script src='js/main.js'></script>
+    <script class="allSizesTemplate" type="text/x-handlebars.template">
+<!-- <label for="size">Select Size</label> -->
+      <select class="form-control" id="sizes">
+      <option>Select Size</option>
+      <option>all</option>
+        {{#each size}}
+      <option type="text" value={{this.size}}>{{this.size}}</option>
+        {{/each}}
+    </select>
 
-    <script>
-        $(".nav li").on("click", function(){
-            $(".nav li").removeClass("active");
-            $(this).addClass("active");
-        });
     </script>
-  </body>
+  </div>
+</form>
+
+
+
+  <div class="container-fluid">
+    <div class="row" border= '1px solid red' style="">
+    <div class="col-xs-4 col-sm-3 col-md-2 allShoes" style="width:100%;" id="shoeList">
+      <script class="allShoesTemplate" type="text/x-handlebars.template">
+       {{#each stock}}
+        <ul class="col-xs-4 col-sm-3 col-md-2 list-unstyled">
+          <!-- <li>ID: {{this._id}}</li> -->
+          <li><img src="images/{{this.img}}" width="150" height="150">{{this.img}}</li>
+          <li>Brand: {{this.brand}}</li>
+          <li>Size: {{this.size}}</li>
+          <li>Color: {{this.color}}</li>
+          <li>Price: {{this.price}}</li>
+          <li>Stock: {{this.in_stock}}</li>
+        </ul>
+        {{/each}}
+      </script>
+    </div>
+  </div>
+</div>
+
+  <div class="container-fluid">
+    <div class="col-xs-12 col-md-6 col-lg-8 saleForm" id="saleForm">
+      <script class="saleFormTemplate" type="text/x-handlebars.template">
+
+        {{#each shoeID}}
+        <label for="object_idSale"> Shoe ID</label>
+        <input class="form-control disabled" id="object_idSale" placeholder="Shoe ID" value={{this._id}} disabled>
+      </div>
+      <div class="form-group">
+        <label for="in_stockSale"> Available Stock</label>
+        <input class="form-control" id="in_stockSale" placeholder="in_stock" value={{this.in_stock}} disabled>
+      </div>
+
+         {{/each}}
+      </script>
+
+    </div>
+
+<div container-fluid>
+  <div class="col-xs-12 col-md-6 col-lg-8" id="purchase">
+  <div class="form-group">
+  <label for="qtySold">Quantity</label>
+  <input class="form-control" id="qtySold" placeholder="Quantity">
+</div>
+  <button class="btn btn-success" id = "purchase">Purchase</button>
+</div>
+</div>
+
+
+</div>
+
+  <script>
+    $(".nav li").on("click", function(){
+        $(".nav li").removeClass("active");
+        $(this).addClass("active");
+    });
+</script>
+
+  <script src='js/filter/filter.js'></script>
+  <script src='js/display/displayAddStock.js'></script>
+  <script src='js/postRequests/postShoes.js'></script>
+  <script src='js/selectItems/selections.js'></script>
+  <script src='js/getRequests/getShoes.js'></script>
+  <script src='js/main.js'></script>
+
+</body>
+
 </html>

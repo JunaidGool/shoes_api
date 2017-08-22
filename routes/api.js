@@ -1,6 +1,34 @@
 const express = require('express');
 const router = express.Router();
 const Shoe = require('../models/shoeModel')
+const multer = require('multer');
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + '.jpg' )
+  }
+});
+
+var upload = multer({ storage: storage }).single('shoes');
+
+// router.post('/test', function (req, res) {
+//   upload(req, res, function (err) {
+//     if (err) {
+//       // An error occurred when uploading
+//
+//     }
+//
+//     // Everything went fine
+//
+//     res.json({
+//       success: true,
+//       message: 'Image uploaded'
+//     })
+//   })
+// });
 
 // add a new shoe to stock
 router.post('/shoes', function(req,res,next){
@@ -42,22 +70,24 @@ router.get('/shoes/sizes/:size', function(req,res,next){
 router.get('/shoes/brands/:brandname/sizes/:size', function(req,res,next){
     var brandSelection = req.params.brandname;
     var sizeSelection = req.params.size;
-    Shoe.find({brand: brandSelection}).then(function(){
-      Shoe.find({size: sizeSelection}).then(function(brandAndSize){
+    Shoe.find({brand: brandSelection , size: sizeSelection }).then(function(brand){
         res.json({
-          stock: brandAndSize
+          stock: brand
         });
-      });
     }).catch(next);
 });
 
 //update the stock levels when a shoe is sold
-router.post('/shoes/sold/:id/:stock_sold', function(req,res,next){
+router.post('/shoes/sold/:id/:in_stock/:sale', function(req,res,next){
     var shoeID = req.params.id;
-    var stock_sold = req.params.id;
+    var currentStock = req.params.in_stock;
+    var saleAmount = req.params.sale;
 
-    Shoe.findOne({_id: shoeID}).then(function(result){
-      console.log(result)
+    var newAmount = currentStock - saleAmount;
+
+    Shoe.findOneAndUpdate({_id: shoeID}, {in_stock: newAmount}).then(function(result){
+
+
       res.json({stock: result});
     }).catch(next);
 });
