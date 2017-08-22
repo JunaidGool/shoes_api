@@ -1,5 +1,5 @@
 
-function add_new_shoe(){
+function add_new_shoe(shoesData){
 
     $('#add-shoe').on('click', function(){
 
@@ -26,9 +26,25 @@ function add_new_shoe(){
 
         alert("You have succesfully added new stock");
 
+        allShoes.innerHTML = allShoesTemplateInstance({
+          stock: shoesData
+        });
+
+         shoe = { stock:{
+          img:  path,
+          brand: "",
+          color: "",
+          size: "",
+          price: "",
+          in_stock: ""
+          }
+        };
+
       }
     });
   });
+
+
 
 };
 

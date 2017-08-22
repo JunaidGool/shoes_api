@@ -11,6 +11,8 @@ function getAllShoes(){
 
       var displayStock = viewStock(shoesData);
 
+      var addNewStock = add_new_shoe(shoesData);
+
       var filterBrandData = filterBrands(shoesData);
 
 
