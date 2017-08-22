@@ -1,13 +1,15 @@
 // get all shoes /api/shoes
 function getAllShoes(){
 
-
+// get all shoes
   $.ajax({
     type: 'GET',
     url: 'https://codex-shoes-api.herokuapp.com/api/shoes',
     success: function(shoes) {
 
       var shoesData = shoes.stock;
+
+      var displayStock = display_add_stock(shoesData);
 
       var filterBrandData = filterBrands(shoesData);
 
