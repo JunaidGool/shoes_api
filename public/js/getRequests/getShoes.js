@@ -9,7 +9,7 @@ function getAllShoes(){
 
       var shoesData = shoes.stock;
 
-      var displayStock = display_add_stock(shoesData);
+      var displayStock = viewStock(shoesData);
 
       var filterBrandData = filterBrands(shoesData);
 

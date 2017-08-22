@@ -1,9 +1,6 @@
 function display_add_stock(){
     $('#addStockDisplay').on('click', function(e){
 
-      allShoes.innerHTML = allShoesTemplateInstance({
-        stock: shoesData
-      });
 
       console.log("clicked");
 
@@ -23,8 +20,13 @@ function display_add_stock(){
 };
 
 
-function viewStock(){
+function viewStock(shoesData){
     $('#viewStock').on('click', function(e){
+
+      allShoes.innerHTML = allShoesTemplateInstance({
+        stock: shoesData
+      });
+
 
       console.log("clicked");
 
