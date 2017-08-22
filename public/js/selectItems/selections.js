@@ -6,8 +6,6 @@ function selectBrand() {
 
     var brand = getBrand(selectedBrand);
 
-    // var brandforsize = getBrandAndSize(selectedBrand);
-
   });
 };
 
@@ -19,8 +17,6 @@ function selectSize() {
     var selectedSize = e.target.value;
 
     var size = getSize(selectedSize);
-
-    // var sizeforbrand = getBrandAndSize(selectedSize);
 
   });
 };
@@ -37,7 +33,7 @@ function selectBrandAndSize(){
 
       $.ajax({
         type: 'GET',
-        url: 'http://localhost:9001/api/shoes/brands/' + selectedBrand + '/sizes/' + selectedSize,
+        url: 'https://codex-shoes-api.herokuapp.com/api/shoes/brands/' + selectedBrand + '/sizes/' + selectedSize,
         success: function(shoes){
 
           var shoesData = shoes.stock;

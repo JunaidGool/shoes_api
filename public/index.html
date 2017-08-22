@@ -78,16 +78,13 @@
 
       <script class="allBrandsTemplate" type="text/x-handlebars.template">
 <!-- <label for="brands"> Select Brand</label> -->
-
         <select class="form-control" id="brands">
-
         <option>Select Brand</option>
         <option>all</option>
           {{#each brandname}}
         <option type="text" value={{this.brand}}>{{this.brand}}</option>
           {{/each}}
       </select>
-
       </script>
     </div>
   </form>
@@ -103,7 +100,6 @@
       <option type="text" value={{this.size}}>{{this.size}}</option>
         {{/each}}
     </select>
-
     </script>
   </div>
 </form>
@@ -133,7 +129,6 @@
   <div class="container-fluid">
     <div class="col-xs-12 col-md-6 col-lg-8 saleForm" id="saleForm">
       <script class="saleFormTemplate" type="text/x-handlebars.template">
-
         {{#each shoeID}}
         <label for="object_idSale"> Shoe ID</label>
         <input class="form-control disabled" id="object_idSale" placeholder="Shoe ID" value={{this._id}} disabled>
@@ -142,7 +137,6 @@
         <label for="in_stockSale"> Available Stock</label>
         <input class="form-control" id="in_stockSale" placeholder="in_stock" value={{this.in_stock}} disabled>
       </div>
-
          {{/each}}
       </script>
 

@@ -4,7 +4,7 @@ function getAllShoes(){
 
   $.ajax({
     type: 'GET',
-    url: 'http://localhost:9001/api/shoes',
+    url: 'https://codex-shoes-api.herokuapp.com/api/shoes',
     success: function(shoes) {
 
       var shoesData = shoes.stock;
@@ -18,8 +18,6 @@ function getAllShoes(){
       allShoes.innerHTML = allShoesTemplateInstance({
         stock: shoesData
       });
-
-    
 
       allBrands.innerHTML = allBrandsTemplateInstance({
         brandname: uniqueBrands
@@ -41,7 +39,7 @@ function getBrand(selectedBrand){
 
   $.ajax({
     type: 'GET',
-    url: 'http://localhost:9001/api/shoes/brands/' + selectedBrand,
+    url: 'https://codex-shoes-api.herokuapp.com/api/shoes/brands/' + selectedBrand,
     success: function(shoes){
 
       var shoesData = shoes.stock;
@@ -66,7 +64,7 @@ function getSize(selectedSize){
   if(selectedSize === "all"){
     $.ajax({
       type: 'GET',
-      url: 'http://localhost:9001/api/shoes',
+      url: 'https://codex-shoes-api.herokuapp.com/api/shoes',
       success: function(shoes){
 
         var shoesData = shoes.stock;
@@ -90,7 +88,7 @@ function getSize(selectedSize){
 
     $.ajax({
       type: 'GET',
-      url: 'http://localhost:9001/api/shoes/sizes/' + selectedSize,
+      url: 'https://codex-shoes-api.herokuapp.com/api/shoes/sizes/' + selectedSize,
       success: function(shoes){
 
         var shoesData = shoes.stock;
@@ -100,10 +98,3 @@ function getSize(selectedSize){
     });
   }
 };
-
-// function getBrandSize(selectedBrand, selectedSize){
-//
-//
-//
-//
-// };

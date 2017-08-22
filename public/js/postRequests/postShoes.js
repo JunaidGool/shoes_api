@@ -1,15 +1,11 @@
 
 function add_new_shoe(){
 
-
     $('#add-shoe').on('click', function(){
 
       console.log(document.getElementById("file").files[0].name);
 
       var path = document.getElementById("file").files[0].name
-
-
-
 
     var shoe = { stock:{
       img:  path,
@@ -29,8 +25,6 @@ function add_new_shoe(){
       success: function(shoes){
 
         alert("You have succesfully added new stock");
-
-
 
       }
     });
@@ -55,14 +49,11 @@ function sale(){
         alert('you sold shoes');
 
         getAllShoes();
-
-
+        objectIDsale = "null" ;
+        in_stockSale = "null" ;
+        qtySold = "";
 
       }
 
     });
-
-    objectIDsale = "" ;
-    in_stockSale = "" ;
-    qtySold = "";
   }

@@ -14,21 +14,6 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage }).single('shoes');
 
-// router.post('/test', function (req, res) {
-//   upload(req, res, function (err) {
-//     if (err) {
-//       // An error occurred when uploading
-//
-//     }
-//
-//     // Everything went fine
-//
-//     res.json({
-//       success: true,
-//       message: 'Image uploaded'
-//     })
-//   })
-// });
 
 // add a new shoe to stock
 router.post('/shoes', function(req,res,next){
