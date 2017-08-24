@@ -1,7 +1,6 @@
 function display_add_stock(){
     $('#addStockDisplay').on('click', function(e){
 
-
       console.log("clicked");
 
         var addStockDisplay = document.getElementById('addStockForm');
@@ -19,14 +18,8 @@ function display_add_stock(){
     });
 };
 
-
-function viewStock(shoesData){
+function viewStock(){
     $('#viewStock').on('click', function(e){
-
-      allShoes.innerHTML = allShoesTemplateInstance({
-        stock: shoesData
-      });
-
 
       console.log("clicked");
 

@@ -1,56 +1,72 @@
-function selectBrand() {
-
-  $('#selectBrandName').on('click', function(e) {
-
-    var selectedBrand = e.target.value;
-
-    var brand = getBrand(selectedBrand);
-
-  });
-};
+var brand = document.getElementById('selectBrandName');
+var selectedBrand = "";
 
 
-function selectSize() {
+var brandClick = brand.addEventListener('change', function(e){
+  selectedBrand = e.target.value;
 
-  $('#selectSize').on('click', function(e) {
+  brandsize()
+});
 
-    var selectedSize = e.target.value;
+var size = document.getElementById('selectSize');
+var selectedSize = 0;
 
-    var size = getSize(selectedSize);
 
-  });
-};
+var sizeClick = size.addEventListener('change', function(e){
+  selectedSize = e.target.value;
 
-function selectBrandAndSize(){
+  brandsize()
+});
 
-  $('#selectBrandName').on('click', function(e){
+function brandsize(){
 
-    var selectedBrand = e.target.value;
+  getBrandAndSize(selectedBrand,selectedSize);
 
-    $('#selectSize').on('click', function(f){
+}
 
-      var selectedSize = f.target.value;
+function getBrandAndSize(selectedBrand, selectedSize){
 
-      $.ajax({
-        type: 'GET',
-        url: 'https://codex-shoes-api.herokuapp.com/api/shoes/brands/' + selectedBrand + '/sizes/' + selectedSize,
-        success: function(shoes){
+  if(selectedBrand !== "all" && selectedSize === 0){
 
-          var shoesData = shoes.stock;
+    $.ajax({
+      type: 'GET',
+      url: 'http://localhost:9001/api/shoes/brands/' + selectedBrand,
+      success: function(shoes){
 
-          allShoes.innerHTML = allShoesTemplateInstance({stock: shoesData});
-          saleForm.innerHTML = saleFormTemplateInstance({shoeID: shoesData});
-        }
-      });
+        var brands = shoes.stock;
+
+        allShoes.innerHTML = allShoesTemplateInstance({stock: brands});
+      }
     });
-  });
-};
 
-function selectPurchase(){
+  } else if (selectedSize !== "all" && selectedBrand === ""){
 
-  $('#shoeList').on('click', function(e){
-    console.log(e.target.parentElement.innerText);
+    $.ajax({
+      type: 'GET',
+      url: 'http://localhost:9001/api/shoes/sizes/' + selectedSize,
+      success: function(shoes){
 
+        var size = shoes.stock;
 
-  });
+        allShoes.innerHTML = allShoesTemplateInstance({stock: size});
+      }
+    });
+
+  } else if (selectedBrand !== undefined && selectedSize !== undefined && selectedBrand !== "" && selectedSize !== 0){
+
+    $.ajax({
+      type: 'GET',
+      url: 'http://localhost:9001/api/shoes/brands/' + selectedBrand + '/sizes/' + selectedSize,
+      success: function(shoes){
+
+        var shoesData = shoes.stock;
+
+        allShoes.innerHTML = allShoesTemplateInstance({stock: shoesData});
+        saleForm.innerHTML = saleFormTemplateInstance({shoeID: shoesData});
+      }
+
+    });
+
+  }
+
 };

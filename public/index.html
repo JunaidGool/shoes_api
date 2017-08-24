@@ -51,19 +51,19 @@
             <input  text="" type ="file" id="file" placeholder="Select Image">
             </div>
             <div class="form-group">
-            <input class="form-control" text="" id="brand" placeholder="Enter Brand"/>
+            <input class="form-control" text="" id="brandname" placeholder="Enter Brand"/>
             </div>
             <div class="form-group">
             <input class="form-control" text="" id="color" placeholder="Enter Color"/>
             </div>
             <div class="form-group">
-            <input class="form-control" text="" id="size" placeholder="Enter Size"/>
+            <input class="form-control" text="" id="shoeSize" placeholder="Enter Size"/>
             </div>
             <div class="form-group">
             <input class="form-control" text="" id="price" placeholder="Enter Price"/>
             </div>
             <div class="form-group">
-            <input class="form-control" text="" id="in_stock" placeholder="Enter Quantity"/>
+            <input class="form-control" text="" id="quantity" placeholder="Enter Quantity"/>
             </div>
           </form>
           <button class="btn btn-success" id="add-shoe">Add New</button>
@@ -78,13 +78,15 @@
 
       <script class="allBrandsTemplate" type="text/x-handlebars.template">
 <!-- <label for="brands"> Select Brand</label> -->
+
         <select class="form-control" id="brands">
-        <option>Select Brand</option>
+
         <option>all</option>
           {{#each brandname}}
         <option type="text" value={{this.brand}}>{{this.brand}}</option>
           {{/each}}
       </select>
+
       </script>
     </div>
   </form>
@@ -94,17 +96,15 @@
     <script class="allSizesTemplate" type="text/x-handlebars.template">
 <!-- <label for="size">Select Size</label> -->
       <select class="form-control" id="sizes">
-      <option>Select Size</option>
       <option>all</option>
         {{#each size}}
       <option type="text" value={{this.size}}>{{this.size}}</option>
         {{/each}}
     </select>
+
     </script>
   </div>
 </form>
-
-
 
   <div class="container-fluid">
     <div class="row" border= '1px solid red' style="">
@@ -114,11 +114,12 @@
         <ul class="col-xs-4 col-sm-3 col-md-2 list-unstyled">
           <!-- <li>ID: {{this._id}}</li> -->
           <li><img src="images/{{this.img}}" width="150" height="150">{{this.img}}</li>
-          <li>Brand: {{this.brand}}</li>
+          <li >Brand: {{this.brand}}</li>
           <li>Size: {{this.size}}</li>
           <li>Color: {{this.color}}</li>
           <li>Price: {{this.price}}</li>
           <li>Stock: {{this.in_stock}}</li>
+          <li  id="purchaseShoe"><button value={{this._id}} class="btn btn-warning" >Purchase</button></li>
         </ul>
         {{/each}}
       </script>
@@ -127,8 +128,9 @@
 </div>
 
   <div class="container-fluid">
-    <div class="col-xs-12 col-md-6 col-lg-8 saleForm" id="saleForm">
+    <div class="col-xs-12 col-md-6 col-lg-8 saleForm" id="saleForm" style="display:none;">
       <script class="saleFormTemplate" type="text/x-handlebars.template">
+
         {{#each shoeID}}
         <label for="object_idSale"> Shoe ID</label>
         <input class="form-control disabled" id="object_idSale" placeholder="Shoe ID" value={{this._id}} disabled>
@@ -143,12 +145,12 @@
     </div>
 
 <div container-fluid>
-  <div class="col-xs-12 col-md-6 col-lg-8" id="purchase">
+  <div class="col-xs-12 col-md-6 col-lg-8" id="purchase" >
   <div class="form-group">
   <label for="qtySold">Quantity</label>
   <input class="form-control" id="qtySold" placeholder="Quantity">
 </div>
-  <button class="btn btn-success" id = "purchase">Purchase</button>
+  <button class="btn btn-success" id = "purchaseButton" >Purchase</button>
 </div>
 </div>
 
@@ -164,6 +166,7 @@
 
   <script src='js/filter/filter.js'></script>
   <script src='js/display/displayAddStock.js'></script>
+  <script src='js/purchase/purchase.js'></script>
   <script src='js/postRequests/postShoes.js'></script>
   <script src='js/selectItems/selections.js'></script>
   <script src='js/getRequests/getShoes.js'></script>

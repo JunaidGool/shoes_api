@@ -17,13 +17,7 @@ function filterBrands(shoesData){
 
             brandMap [brandList] = brandList;
 
-
-
             uniqueBrands.push({brand: brandList});
-
-            // uniqueBrands.filter();
-
-
 
         };
     };
@@ -40,7 +34,6 @@ function filterSizes(shoesData){
         if(sizeMap[sizeList] === undefined){
 
             sizeMap[sizeList] = sizeList;
-
 
             uniqueSizes.push({size: sizeList});
 

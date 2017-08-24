@@ -1,53 +1,49 @@
-
-function add_new_shoe(shoesData){
+function addNewShoe(cb, errcb){
 
     $('#add-shoe').on('click', function(){
 
-      console.log(document.getElementById("file").files[0].name);
-
       var path = document.getElementById("file").files[0].name
 
-    var shoe = { stock:{
-      img:  path,
-      brand: brand.value,
-      color: color.value,
-      size: size.value,
-      price: price.value,
-      in_stock: in_stock.value
-      }
-    };
+      var shoe = { stock:{
+        img:  path,
+        brand: brandname.value,
+        color: color.value,
+        size: shoeSize.value,
+        price: price.value,
+        in_stock: quantity.value
+        }
+      };
 
       $.ajax({
       contentType: 'application/x-www-form-urlencoded',
       type: 'POST',
-      url: 'https://codex-shoes-api.herokuapp.com/api/shoes',
+      url: 'http://localhost:9001/api/shoes',
       data: shoe,
       success: function(shoes){
 
         alert("You have succesfully added new stock");
 
-        allShoes.innerHTML = allShoesTemplateInstance({
-          stock: shoesData
-        });
-
-         shoe = { stock:{
-          img:  path,
-          brand: "",
-          color: "",
-          size: "",
-          price: "",
-          in_stock: ""
-          }
-        };
+        location.reload();
 
       }
     });
   });
-
-
-
 };
 
+
+// get all shoes /api/shoes
+// function getAllShoes(cb, errCb){
+//
+//   $.ajax({
+//     type: 'GET',
+//     url: 'http://localhost:9001/api/shoes',
+//     success: cb,
+//     error: errCb
+//   });
+// };
+
+var purchaseButton = document.getElementById('purchaseButton');
+purchaseButton.addEventListener('click', sale);
 
 function sale(){
   //sell stock form
@@ -59,17 +55,23 @@ function sale(){
 
       contentType: 'application/x-www-form-urlencoded',
       type: 'POST',
-      url: 'https://codex-shoes-api.herokuapp.com/api/shoes/sold/' + objectIDsale + '/' + in_stockSale + '/' + qtySold,
+      url: 'http://localhost:9001/api/shoes/sold/' + objectIDsale + '/' + in_stockSale + '/' + qtySold,
       data: objectIDsale, in_stockSale, qtySold,
       success: function(shoes){
         alert('you sold shoes');
 
-        getAllShoes();
-        objectIDsale = "null" ;
-        in_stockSale = "null" ;
-        qtySold = "";
+        selectBrandName.style.display = "block";
+        selectSize.style.display = "block";
+        shoeList.style.display = "block";
+        purchaseForm.style.display = "block";
+
+
 
       }
 
     });
+
+    location.reload();
+
+
   }
