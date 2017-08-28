@@ -8,10 +8,16 @@
 * Adds a new shoe to the available stock.
 
 ### Getting Started
-* Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine.
+* Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine from GitHub.
 
 ### Prerequisites
+* A prefered text editor or IDE which would allow you to write your desired code.
+  https://en.wikipedia.org/wiki/Integrated_development_environment
+  https://en.wikipedia.org/wiki/Text_editor
+  
+* A prefered CLI (command line interface).
+  https://en.wikipedia.org/wiki/Command-line_interface
 
 
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
