@@ -8,7 +8,7 @@
 * Updates the stock levels when a shoe is sold.
 * Adds a new shoe to the available stock.
 
-#### The below documenation has two sections.<br/>
+#### The below documentation has two sections.<br/>
 * Getting Started (back-end)<br/>
 * Getting Started (front-end)<br/>
 
@@ -94,6 +94,8 @@ To find out more about these dependencies please view the links below
    "Now listening to Port Number: 9001 "
 
 3. Well Done !! The Api is now succesfully running !!
+
+### Getting Started (front-end)
   
 
 
