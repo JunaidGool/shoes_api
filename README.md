@@ -23,6 +23,9 @@
 * A prefered CLI (command line interface).<br/>
   https://en.wikipedia.org/wiki/Command-line_interface
   
+* Google Chrome Web Browser.<br/>
+  https://www.google.com/chrome/browser/desktop/index.html?brand=CHBD&gclid=EAIaIQobChMItbWz8fz51QIVS7vtCh0MvwRIEAAYASAAEgIBDfD_BwE
+  
 * A stable version of node.js for your operating system requirements.</br>
   https://nodejs.org </br>
   https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm
@@ -138,6 +141,14 @@ const ShoeSchema = new Schema
 
 ### Getting Started (front-end)
 * Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine from GitHub.
+
+### Prerequisites
+* A prefered text editor or IDE which would allow you to write your desired code.
+  https://en.wikipedia.org/wiki/Integrated_development_environment<br/>
+  https://en.wikipedia.org/wiki/Text_editor
+  
+* A prefered CLI (command line interface).<br/>
+  https://en.wikipedia.org/wiki/Command-line_interface
   
 
 
