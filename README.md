@@ -109,8 +109,12 @@ To find out more about these dependencies please view the links below
 
 HTTP Method | Route Name | Description
 ------------ | ------------- | ---------
-GET | /api/shoes	 	  | List all shoes in stock <br/>
-
+GET | /api/shoes	 	  | List all shoes in stock 
+GET | /api/shoes/brand/:brandname		 	  | List all shoes for a given brand
+GET | /api/shoes/size/:size	 	  | List all shoes for a given size
+GET | /api/shoes/brand/:brandname/size/:size	 	  | List all shoes for a given brand and size
+POST | /api/shoes/sold/:id	 	  | Update the stock levels when a shoe is sold
+POST | /api/shoes	 	  | Add a new new shoe to his stock.
 ### Getting Started (front-end)
 * Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine from GitHub.
   
