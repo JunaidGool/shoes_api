@@ -1,5 +1,7 @@
 # Shoes_API
 
+![Alt text](/relative/path/to/img.jpg)
+
 ### A Rest-API that :
 * Lists all the shoes that are available within the current stock.
 * Filter for all the shoes for a given brand that are available.
