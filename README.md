@@ -39,27 +39,28 @@
 ### Installing
 1. Access the package.json file, this file contains all the required dependencies to be installed.
    Below is what the package.json file will look like.
-
-    {<br/>
-  "name": "shoes-rest-api",<br/>
-  "version": "1.0.0",<br/>
-  "description": "",<br/>
-  "main": "index.js",<br/>
-  "scripts": {<br/>
-    "test": "echo \"Error: no test specified\" && exit 1"<br/>
-  },<br/>
-  "engines": {<br/>
-    "node": "6.10.2"<br/>
-  },<br/>
-  "author": "",<br/>
-  "license": "ISC",<br/>
-  "dependencies": {<br/>
-    "body-parser": "^1.17.2",<br/>
-    "express": "^4.15.3",<br/>
-    "mongoose": "^4.11.5",<br/>
-    "multer": "^1.3.0"<br/>
-  }<br/>
-}<br/>
+```javascript
+    {
+  "name": "shoes-rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "6.10.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.5",
+    "multer": "^1.3.0"
+  }
+}
+```
 
 To find out more about these dependencies please view the links below
 * Mongoose.</br>
