@@ -76,6 +76,18 @@ To find out more about these dependencies please view the links below
    This will install all the required dependencies.<br/>
 4. Your development environment will now be setup.
 
+### Starting the APP
+1. Open mongoDB and get your server started.
+   https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/ <br/>
+   https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-ubuntu/ <br/>
+   https://treehouse.github.io/installation-guides/mac/mongo-mac.html <br/>
+  
+2. On a seperate screen on your CLI, navigate to your working folder.Once you are in the appropriate folder
+   input this command * nodemon
+  
+
+
+
   
 
 
