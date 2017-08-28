@@ -1,6 +1,6 @@
 # Shoes_API
 
-![Alt text](./readme_images/addshoe.gif)
+![Alt text](./readme_images/addshoe.gif?raw=true)
 
 ### A Rest-API that :
 * Lists all the shoes that are available within the current stock.
