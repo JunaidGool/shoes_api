@@ -7,7 +7,7 @@
 * Updates the stock levels when a shoe is sold.
 * Adds a new shoe to the available stock.
 
-### Getting Started
+### Getting Started (back-end)
 * Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine from GitHub.
 
 ### Prerequisites
@@ -82,8 +82,11 @@ To find out more about these dependencies please view the links below
    https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-ubuntu/ <br/>
    https://treehouse.github.io/installation-guides/mac/mongo-mac.html <br/>
   
-2. On a seperate screen on your CLI, navigate to your working folder.Once you are in the appropriate folder
-   input this command * nodemon
+2. On a seperate screen in your CLI, navigate to your working folder.Once you are in the appropriate folder
+   input this command <br/>
+   * nodemon <br/>
+   You should now see the following message displayed on your CLI.<br/>
+   " Now listening to Port Number: 9001 "
   
 
 
