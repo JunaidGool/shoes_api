@@ -98,14 +98,13 @@ To find out more about these dependencies please view the links below
 ### Understanding the API routes.
 
 
-#### HTTP     Route Name                                Description
-#### Method	
-* GET	        /api/shoes	                              List all shoes in stock <br/>
-* GET	        /api/shoes/brand/:brandname	              List all shoes for a given brand<br/>
-* GET	        /api/shoes/size/:size	                    List all shoes for a given size<br/>
-* GET	        /api/shoes/brand/:brandname/size/:size	  List all shoes for a given brand and size<br/>
-* POST	      /api/shoes/sold/:id	                      Update the stock levels when a shoe is sold</br>
-* POST	      /api/shoes	                              Add a new new shoe to his stock.</br>
+#### HTTP Method     | Route Name                              | Description
+* GET	                /api/shoes	                              List all shoes in stock <br/>
+* GET	                /api/shoes/brand/:brandname	              List all shoes for a given brand<br/>
+* GET	                /api/shoes/size/:size	                    List all shoes for a given size<br/>
+* GET	                /api/shoes/brand/:brandname/size/:size	  List all shoes for a given brand and size<br/>
+* POST	              /api/shoes/sold/:id	                      Update the stock levels when a shoe is sold</br>
+* POST	              /api/shoes	                              Add a new new shoe to his stock.</br>
 
 
 
