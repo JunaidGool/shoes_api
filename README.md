@@ -107,33 +107,33 @@ POST | /api/shoes/sold/:id	 	  | Update the stock levels when a shoe is sold
 POST | /api/shoes	 	  | Add a new new shoe to his stock.
 
 ### Understanding the Model Schema
-
-const ShoeSchema = new Schema<br/>
-    img:{<br/>
-        data: Buffer,<br/>
-        type: String<br/>
-    },<br/>
-    brand:{<br/>
+```javascript
+const ShoeSchema = new Schema
+    img:{
+        data: Buffer,
+        type: String
+    },
+    brand:{
         type: String,<br/>
-         required:[true, 'Brand Field Is Required']<br/>
-    },<br/>
-    color:{<br/>
-        type: String,<br/>
-         required:[true, 'Color Field Is Required']<br/>
-    },<br/>
-    size:{<br/>
-        type: Number,<br/>
-         required:[true, 'Size Field Is Required']<br/>
-    },<br/>
-    price:{<br/>
-        type: Number,<br/>
+         required:[true, 'Brand Field Is Required']
+    },
+    color:{
+        type: String,
+         required:[true, 'Color Field Is Required']
+    },
+    size:{
+        type: Number,
+         required:[true, 'Size Field Is Required']
+    },
+    price:{
+        type: Number,
          required:[true, 'Price Field Is Required']<br/>
-    },<br/>
-    in_stock:{<br/>
-        type: Number<br/>
-    }<br/>
-});<br/>
-
+    },
+    in_stock:{
+        type: Number
+    }
+});
+```
 
 ### Getting Started (front-end)
 * Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine from GitHub.
