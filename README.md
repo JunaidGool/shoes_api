@@ -157,6 +157,12 @@ const ShoeSchema = new Schema
 
 * Shoes_Api backend model schema and routes (please refer to above, "Understanding the Model Schema" and "Understanding the API routes")
 
+* Handlebars. <br/>
+  http://handlebarsjs.com
+
+* JQuery. <br/>
+  https://jquery.com
+
 ### Starting the APP
 1. Open mongoDB and get your server started.
    https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/ <br/>
