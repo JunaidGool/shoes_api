@@ -63,6 +63,7 @@ getAllShoes(function(shoes) {
     selectSize.style.display = "none";
     shoeList.style.display = "none";
     saleForm.style.display = "block";
+    purchaseItemQ.style.display = "block";
 
   });
 

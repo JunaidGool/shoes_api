@@ -65,13 +65,10 @@ function sale(){
         shoeList.style.display = "block";
         purchaseForm.style.display = "block";
 
-
-
       }
 
     });
 
     location.reload();
-
 
   }
