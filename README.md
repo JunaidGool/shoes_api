@@ -163,6 +163,39 @@ const ShoeSchema = new Schema
 * JQuery. <br/>
   https://jquery.com
 
+* Bootstrap.<br/>
+  http://getbootstrap.com/
+  
+### Setting up the front end environment  
+
+In the index.html file within the head please link the handlebars, jquery, bootsrap as the example below.
+
+```javascript
+<head>
+  <title>shoes_api_front_end</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="libraries/bootstrap.min.css" rel="stylesheet">
+  <script src="libraries/handlebars-v4.0.5.js"></script>
+  <script src='libraries/jquery.js'></script>
+  <script src='libraries/bootstrap.min.js'></script>
+</head>
+```
+
+### Retrieving and Posting Data 
+
+Please review the api routes below.<br/>
+
+HTTP Method | Route Name | Description
+------------ | ------------- | ---------
+GET | /api/shoes	 	  | List all shoes in stock 
+GET | /api/shoes/brand/:brandname		 	  | List all shoes for a given brand
+GET | /api/shoes/size/:size	 	  | List all shoes for a given size
+GET | /api/shoes/brand/:brandname/size/:size	 	  | List all shoes for a given brand and size
+POST | /api/shoes/sold/:id	 	  | Update the stock levels when a shoe is sold
+POST | /api/shoes	 	  | Add a new new shoe to his stock.
+
+
+
 ### Starting the APP
 1. Open mongoDB and get your server started.
    https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/ <br/>
