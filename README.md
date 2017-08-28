@@ -107,10 +107,10 @@ To find out more about these dependencies please view the links below
 * POST	             | /api/shoes/sold/:id	                   | Update the stock levels when a shoe is sold</br>
 * POST	             | /api/shoes	                             | Add a new new shoe to his stock.</br>
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+HTTP Method | Route Name | Description
+------------ | ------------- | ---------
+Content from cell 1 | Content from cell 2 | content cell 3
+Content in the first column | Content in the second column | Content in the second column
 
 ### Getting Started (front-end)
 * Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine from GitHub.
