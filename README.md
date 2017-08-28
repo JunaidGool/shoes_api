@@ -1,5 +1,5 @@
 # Shoes_API
-## An API that :
+### An API that :
 * Lists all the shoes that are availble within the current stock.
 * Filter for all the shoes for a given brand that are available.
 * Filter for all the shoes for a given size that are available.
