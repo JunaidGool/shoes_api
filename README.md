@@ -17,6 +17,10 @@
   
 * A prefered CLI (command line interface).<br/>
   https://en.wikipedia.org/wiki/Command-line_interface
+  
+* A stable version of node.js for your operating system requirements.</br>
+  https://nodejs.org </br>
+  https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm
 
 
 
