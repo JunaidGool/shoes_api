@@ -38,6 +38,8 @@ getAllShoes(function(shoes) {
 
   var filterSizeData = filterSizes(shoesData);
 
+
+
   // var sale = purchaseShoe(shoesData);
 
   allShoes.innerHTML = allShoesTemplateInstance({

@@ -3,7 +3,7 @@ function getAllShoes(cb, errCb){
 
   $.ajax({
     type: 'GET',
-    url: 'http://localhost:9001/api/shoes',
+    url: 'https://codex-shoes-api.herokuapp.com/api/shoes',
     success: cb,
     error: errCb
   });
