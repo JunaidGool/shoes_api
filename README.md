@@ -72,7 +72,7 @@ To find out more about these dependencies please view the links below
   
 2. Open your CLI (command line interface) and navigate to your working folder.
 3. When you have navigated to the working folder, input this command in your CLI.
-   * npm install --save
+   * npm install --save</br>
    This will install all the required dependencies.<br/>
 4. Your development environment will now be setup.
 
