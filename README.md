@@ -150,6 +150,29 @@ const ShoeSchema = new Schema
 * A prefered CLI (command line interface).<br/>
   https://en.wikipedia.org/wiki/Command-line_interface
   
+* Google Chrome Web Browser.<br/>
+  https://www.google.com/chrome/browser/desktop/index.html?brand=CHBD&gclid=EAIaIQobChMItbWz8fz51QIVS7vtCh0MvwRIEAAYASAAEgIBDfD_BwE
+
+* Shoes_Api backend model schema and routes (please refer to above, "Understanding the Model Schema" and "Understanding the API routes")
+
+### Starting the APP
+1. Open mongoDB and get your server started.
+   https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/ <br/>
+   https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-ubuntu/ <br/>
+   https://treehouse.github.io/installation-guides/mac/mongo-mac.html <br/>
+  
+2. On a seperate screen in your CLI, navigate to your working folder. Once you are in the appropriate folder
+   input this command <br/>
+   * nodemon <br/>
+   You should now see the following message displayed on your CLI.<br/>
+   "Now listening to Port Number: 9001 "
+
+3. Well Done !! The Api is now succesfully running !! You are now able to access the client side interface to add, update and view stock.
+
+4. Navigate to the working folder, open the index.html file in the google browser.
+
+5. the app should now be online
+  
 
 
 
