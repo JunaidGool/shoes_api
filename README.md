@@ -1,6 +1,6 @@
 # Shoes_API
 
-![Alt text](./readme_images/addshoe.gif?raw=true)
+![Alt text](https://github.com/JunaidGool/shoes_api/blob/master/readme_images/addshoe.GIF)
 
 ### A Rest-API that :
 * Lists all the shoes that are available within the current stock.
