@@ -110,7 +110,6 @@ To find out more about these dependencies please view the links below
 HTTP Method | Route Name | Description
 ------------ | ------------- | ---------
 GET | /api/shoes	 	  | List all shoes in stock <br/>
-Content in the first column | Content in the second column | Content in the second column
 
 ### Getting Started (front-end)
 * Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine from GitHub.
