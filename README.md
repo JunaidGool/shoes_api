@@ -1,6 +1,6 @@
 # Shoes_API
 
-![Alt text](https://github.com/JunaidGool/shoes_api/blob/master/readme_images/landingPage.GIF)
+![Alt text](https://github.com/JunaidGool/shoes_api/blob/master/readme_images/postManImage.GIF)
 
 ### A Rest-API that :
 * Lists all the shoes that are available within the current stock.
@@ -157,6 +157,45 @@ const ShoeSchema = new Schema
 
 * Shoes_Api backend model schema and routes (please refer to above, "Understanding the Model Schema" and "Understanding the API routes")
 
+* Handlebars. <br/>
+  http://handlebarsjs.com
+
+* JQuery. <br/>
+  https://jquery.com
+
+* Bootstrap.<br/>
+  http://getbootstrap.com/
+  
+### Setting up the front end environment  
+
+In the index.html file within the head please link the handlebars, jquery, bootsrap as the example below.
+
+```javascript
+<head>
+  <title>shoes_api_front_end</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="libraries/bootstrap.min.css" rel="stylesheet">
+  <script src="libraries/handlebars-v4.0.5.js"></script>
+  <script src='libraries/jquery.js'></script>
+  <script src='libraries/bootstrap.min.js'></script>
+</head>
+```
+
+### Retrieving and Posting Data 
+
+Please review the api routes below.<br/>
+
+HTTP Method | Route Name | Description
+------------ | ------------- | ---------
+GET | /api/shoes	 	  | List all shoes in stock 
+GET | /api/shoes/brand/:brandname		 	  | List all shoes for a given brand
+GET | /api/shoes/size/:size	 	  | List all shoes for a given size
+GET | /api/shoes/brand/:brandname/size/:size	 	  | List all shoes for a given brand and size
+POST | /api/shoes/sold/:id	 	  | Update the stock levels when a shoe is sold
+POST | /api/shoes	 	  | Add a new new shoe to his stock.
+
+
+
 ### Starting the APP
 1. Open mongoDB and get your server started.
    https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/ <br/>
@@ -176,8 +215,11 @@ const ShoeSchema = new Schema
 5. the app should now be live.
 
 ### Navigating the APP
-1. On start-up all the available shoes will be displayed.
-2. Two drop down boxes gives the user options to search for the brand and size of specific shoe.
-3. Each shoe has a short description of the shoe and a purchase button that allows the user to purchase a selected shoe. Once selected      the user will then be prompted to enter the number of shoes he/she would like to purchase. Once the amount is inputed and the            purchase button is clicked, current stock available for that shoe will be updated accordingly.
-4. The user has an option to add a new shoe, the user will enter the shoe details and insert a selected image for that shoe.
+1. On start-up all the available shoes will be displayed.<br/>
+![Alt text](https://github.com/JunaidGool/shoes_api/blob/master/readme_images/landingPage.GIF)<br/>
+2. Two drop down boxes gives the user options to search for the brand and size of specific shoe.<br/>
+3. Each shoe has a short description of the shoe and a purchase button that allows the user to purchase a selected shoe. Once selected      the user will then be prompted to enter the number of shoes he/she would like to purchase. Once the amount is inputed and the            purchase button is clicked, current stock available for that shoe will be updated accordingly.<br/>
+![Alt text](https://github.com/JunaidGool/shoes_api/blob/master/readme_images/purchase.GIF)<br/>
+4. The user has an option to add a new shoe, the user will enter the shoe details and insert a selected image for that shoe.<br/>
+![Alt text](https://github.com/JunaidGool/shoes_api/blob/master/readme_images/addshoe.GIF)
   
