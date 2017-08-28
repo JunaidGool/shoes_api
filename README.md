@@ -1,7 +1,7 @@
 # Shoes_API
 
 ### A Rest-API that :
-* Lists all the shoes that are availble within the current stock.
+* Lists all the shoes that are available within the current stock.
 * Filter for all the shoes for a given brand that are available.
 * Filter for all the shoes for a given size that are available.
 * Filter for all the shoes for a given brand and size that are available.
@@ -93,9 +93,21 @@ To find out more about these dependencies please view the links below
    You should now see the following message displayed on your CLI.<br/>
    "Now listening to Port Number: 9001 "
 
-3. Well Done !! The Api is now succesfully running !!
+3. Well Done !! The Api is now succesfully running !! You are now able to use Postman to add, view and update stock using postman and have the option to view your data within your database using Robomongo
+
+### Understanding the API routes.
+
+*GET	/api/shoes	List all shoes in stock <br/>
+*GET	/api/shoes/brand/:brandname	List all shoes for a given brand<br/>
+*GET	/api/shoes/size/:size	List all shoes for a given size<br/>
+*GET	/api/shoes/brand/:brandname/size/:size	List all shoes for a given brand and size<br/>
+*POST	/api/shoes/sold/:id	Update the stock levels when a shoe is sold</br>
+*POST	/api/shoes	Add a new new shoe to his stock.</br>
+
+
 
 ### Getting Started (front-end)
+* Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine from GitHub.
   
 
 
