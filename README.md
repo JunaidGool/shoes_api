@@ -12,10 +12,10 @@
 
 ### Prerequisites
 * A prefered text editor or IDE which would allow you to write your desired code.
-  https://en.wikipedia.org/wiki/Integrated_development_environment
+  https://en.wikipedia.org/wiki/Integrated_development_environment<br/>
   https://en.wikipedia.org/wiki/Text_editor
   
-* A prefered CLI (command line interface).
+* A prefered CLI (command line interface).<br/>
   https://en.wikipedia.org/wiki/Command-line_interface
 
 
