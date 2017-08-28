@@ -171,7 +171,13 @@ const ShoeSchema = new Schema
 
 4. Navigate to the working folder, open the index.html file in the google browser.
 
-5. the app should now be online
+5. the app should now be live.
+
+### Navigating the APP
+1. On start-up all the available shoes will be displayed.
+2. Two drop down boxes gives the user options to search for the brand and size of specific shoe.
+3. Each shoe has a short description of the shoe and a purchase button that allows the user to purchase a selected shoe. Once selected      the user will then be prompted to enter the number of shoes he/she would like to purchase. Once the amount is inputed and the            purchase button is clicked, current stock available for that shoe will be updated accordingly.
+4.
   
 
 
