@@ -1,4 +1,5 @@
 # Shoes_API
+
 ### A Rest-API that :
 * Lists all the shoes that are availble within the current stock.
 * Filter for all the shoes for a given brand that are available.
@@ -6,6 +7,10 @@
 * Filter for all the shoes for a given brand and size that are available.
 * Updates the stock levels when a shoe is sold.
 * Adds a new shoe to the available stock.
+
+#### The below documenation has two sections.<br/>
+* Getting Started (back-end)<br/>
+* Getting Started (front-end)<br/>
 
 ### Getting Started (back-end)
 * Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine from GitHub.
