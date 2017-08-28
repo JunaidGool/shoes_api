@@ -8,8 +8,9 @@
 * Adds a new shoe to the available stock.
 
 ### Getting Started
+* Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine.
 
-getting the git repository from GitHub to their machine (either by cloning the original or making a fork);
+### Prerequisites
 
 
 
