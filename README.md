@@ -22,6 +22,16 @@
   https://nodejs.org </br>
   https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm
 
+* A stable version of MongoDB.<br/>
+  https://www.mongodb.com/what-is-mongodb
+
+* Mongoose.</br>
+  https://www.npmjs.com/package/mongoose
+
+* ExpressJS.</br>
+  https://en.wikipedia.org/wiki/Express.js<br/>
+  https://expressjs.com<br/>
+
 
 
 
