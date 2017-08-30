@@ -18,29 +18,11 @@
 * Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine from GitHub.
 
 ### Prerequisites
-* A prefered text editor or IDE which would allow you to write your desired code.
-  https://en.wikipedia.org/wiki/Integrated_development_environment<br/>
-  https://en.wikipedia.org/wiki/Text_editor
-  
-* A prefered CLI (command line interface).<br/>
-  https://en.wikipedia.org/wiki/Command-line_interface
-  
-* Google Chrome Web Browser.<br/>
-  https://www.google.com/chrome/browser/desktop/index.html?brand=CHBD&gclid=EAIaIQobChMItbWz8fz51QIVS7vtCh0MvwRIEAAYASAAEgIBDfD_BwE
-  
-* A stable version of node.js for your operating system requirements.</br>
-  https://nodejs.org </br>
-  https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm
-
-* A stable version of MongoDB.<br/>
-  https://www.mongodb.com/what-is-mongodb
-  
+* node.js for your operating system requirements, this application was developed using version 6.10.2</br>
+* MongoDB.<br/>
 * RoboMongo (optional).<br/>
-  https://robomongo.org/
-  
 * Postman (optional).<br/>
-  https://www.getpostman.com/
-  
+
 ### Installing
 1. Access the package.json file, this file contains all the required dependencies to be installed.
    Below is what the package.json file will look like.
@@ -66,40 +48,28 @@
   }
 }
 ```
-
-To find out more about these dependencies please view the links below
-* Mongoose.</br>
-  https://www.npmjs.com/package/mongoose
-
-* ExpressJS.</br>
-  https://en.wikipedia.org/wiki/Express.js<br/>
-  https://expressjs.com<br/>
-
-* Body-Parser.</br>
-  https://www.npmjs.com/package/body-parser
-  
-* Multer. </br>
-  https://www.npmjs.com/package/multer
-  
 2. Open your CLI (command line interface) and navigate to your working folder.
 3. When you have navigated to the working folder, input this command in your CLI.
-   * npm install --save</br>
+
+```javascript
+   npm install --save</br>
+```
+   
    This will install all the required dependencies.<br/>
 4. Your development environment will now be setup.
 
 ### Starting the APP
 1. Open mongoDB and get your server started.
-   https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/ <br/>
-   https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-ubuntu/ <br/>
-   https://treehouse.github.io/installation-guides/mac/mongo-mac.html <br/>
   
 2. On a seperate screen in your CLI, navigate to your working folder. Once you are in the appropriate folder
    input this command <br/>
-   * nodemon <br/>
+   ```javascript
+      nodemon <br/>
+   ```
    You should now see the following message displayed on your CLI.<br/>
    "Now listening to Port Number: 9001 "
 
-3. Well Done !! The Api is now succesfully running !! You are now able to use Postman to add, view and update stock using postman and have the option to view your data within your database using Robomongo
+3. The Api is now succesfully running !! You are now able to use Postman to add, view and update stock using postman and have the option to view your data within your database using Robomongo
 
 ### Understanding the API routes.
 
@@ -145,26 +115,10 @@ const ShoeSchema = new Schema
 * Clone, download or fork this respository https://github.com/JunaidGool/shoes_api to your machine from GitHub.
 
 ### Prerequisites
-* A prefered text editor or IDE which would allow you to write your desired code.
-  https://en.wikipedia.org/wiki/Integrated_development_environment<br/>
-  https://en.wikipedia.org/wiki/Text_editor
-  
-* A prefered CLI (command line interface).<br/>
-  https://en.wikipedia.org/wiki/Command-line_interface
-  
-* Google Chrome Web Browser.<br/>
-  https://www.google.com/chrome/browser/desktop/index.html?brand=CHBD&gclid=EAIaIQobChMItbWz8fz51QIVS7vtCh0MvwRIEAAYASAAEgIBDfD_BwE
-
 * Shoes_Api backend model schema and routes (please refer to above, "Understanding the Model Schema" and "Understanding the API routes")
-
 * Handlebars. <br/>
-  http://handlebarsjs.com
-
 * JQuery. <br/>
-  https://jquery.com
-
 * Bootstrap.<br/>
-  http://getbootstrap.com/
   
 ### Setting up the front end environment  
 
@@ -197,22 +151,20 @@ POST | /api/shoes	 	  | Add a new new shoe to his stock.
 
 
 ### Starting the APP
-1. Open mongoDB and get your server started.
-   https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/ <br/>
-   https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-ubuntu/ <br/>
-   https://treehouse.github.io/installation-guides/mac/mongo-mac.html <br/>
-  
+1. Open mongoDB and get your server started.<br/>
 2. On a seperate screen in your CLI, navigate to your working folder. Once you are in the appropriate folder
    input this command <br/>
-   * nodemon <br/>
+   
+   ```javascript
+   nodemon
+   ```
+   
    You should now see the following message displayed on your CLI.<br/>
    "Now listening to Port Number: 9001 "
 
-3. Well Done !! The Api is now succesfully running !! You are now able to access the client side interface to add, update and view stock.
-
-4. Navigate to the working folder, open the index.html file in the google browser.
-
-5. the app should now be live.
+3. The Api is now succesfully running !! You are now able to access the client side interface to add, update and view stock.<br/>
+4. Navigate to the working folder, open the index.html file in the google browser.<br/>
+5. the app should now be live.<br/>
 
 ### Navigating the APP
 1. On start-up all the available shoes will be displayed.<br/>
