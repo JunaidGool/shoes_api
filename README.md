@@ -52,7 +52,7 @@
 3. When you have navigated to the working folder, input this command in your CLI.
 
 ```javascript
-   npm install --save</br>
+   npm install --save
 ```
    
    This will install all the required dependencies.<br/>
@@ -64,7 +64,7 @@
 2. On a seperate screen in your CLI, navigate to your working folder. Once you are in the appropriate folder
    input this command <br/>
    ```javascript
-      nodemon <br/>
+      nodemon 
    ```
    You should now see the following message displayed on your CLI.<br/>
    "Now listening to Port Number: 9001 "
@@ -90,7 +90,7 @@ const ShoeSchema = new Schema
         type: String
     },
     brand:{
-        type: String,<br/>
+        type: String,
          required:[true, 'Brand Field Is Required']
     },
     color:{
@@ -103,7 +103,7 @@ const ShoeSchema = new Schema
     },
     price:{
         type: Number,
-         required:[true, 'Price Field Is Required']<br/>
+         required:[true, 'Price Field Is Required']
     },
     in_stock:{
         type: Number
