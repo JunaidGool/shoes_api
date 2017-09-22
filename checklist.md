@@ -22,7 +22,7 @@
   eg. nodeJS, mySQL, Express, Handlebars etc
   
 ### Starting the back-end
-* describe how to get this app running.
+* describe how to get the back-end running.
 
 ### Understanding routes.
 * if this app requires routes, please describe what each route does
