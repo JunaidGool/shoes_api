@@ -17,7 +17,7 @@
   eg. nodeJS, mySQL, Express etc
 
 ### Installing
-* describe the installation process that is required for any system software that is required,
+* describe the installation process that is required for any system software,
   as well as for any dependencies that would be required for this app.
   eg. nodeJS, mySQL, Express, Handlebars etc
   
