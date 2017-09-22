@@ -7,10 +7,10 @@
 * Describe the first steps of getting the files to your machine, for the back-end.
 
 #### The below documentation has XXX sections.
-* give a brief description of how this document is divided.
+* give a brief description of how this document is divided.<br/>
   eg The below documentation has two sections.<br/>
-      * section 1.
-      * section 2.
+      * section 1.<br/>
+      * section 2.<br/>
 
 ### Back-end prerequisites
 * List all the back-end software requirements needed for this app.
