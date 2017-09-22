@@ -69,7 +69,7 @@
    You should now see the following message displayed on your CLI.<br/>
    "Now listening to Port Number: 9001 "
 
-3. The Api is now succesfully running !! You are now able to use Postman to add, view and update stock using postman and have the option to view your data within your database using Robomongo
+3. The Api is now succesfully running !! You are now able to add, view and update stock using postman and have the option to view your data within your database using Robomongo.
 
 ### Understanding the API routes.
 
