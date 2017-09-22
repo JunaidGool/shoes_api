@@ -1,6 +1,6 @@
 # Checklist For API App's
 
-### An App that ...... :
+### An App that ...... 
 * Please describe what your app does here.
 
 ### Getting Started (back-end)
